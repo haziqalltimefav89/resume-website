@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haziq Resume</title>
+  <style>
+    /* CSS in HTML/ NO SEPARATE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .profile-pic {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    nav {
+      background: #34495e;
+      padding: 0.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #1abc9c;
+    }
+
+    main {
+      flex: 1; 
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    section h2 {
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    /* Dua kotak  */
+    .two-box {
+      display: flex;
+      gap: 20px;
+      max-width: 900px;
+      margin: 2rem auto;
+      flex-wrap: wrap; /* : turun  */
+    }
+
+    .box {
+      flex: 1;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .box h3 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+
+    footer {
+      text-align: center;
+      background: #1a252f;
+      color: #fff;
+      padding: 1rem;
+      margin-top: auto; /*  footer */
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <a href="image/pasport haziq.png">
+        <img src="image/pasport haziq.png" height="200" border="5" alt="TRY AGAIN TUE" hspace="15" vspace="15">
+      </a>
+      <h1><a name="top"></a>MUHAMMAD HAZIQ HAIZAL BIN AHMAD RIZAL</h1>
+      <p>2024530177 | CDIM110 Diploma in Information Management</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="biodata.html" alt="Biodata">About Me</a></li>
+      <li><a href="skill.html">Skills</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="edutimeline.html">Education</a></li>
+    </ul>
+  </nav>
+
+  <!-- Content -->
+  <main>
+    <!-- Kotak -->
+    <div class="two-box">
+      <div style="background-image:url('image/porcebiru.png'); 
+                  background-size:cover; 
+                  background-position:center; 
+                  border-radius:10px; 
+                  box-shadow:0 0 15px rgba(0,0,0,0.1); 
+                  width:80%; height:250px; margin-top:20px;">
+      </div>
+
+      <!-- Kotak kanan -->
+      <div class="box">
+        <h3>
+          <a href="gallerypage.html" style="text-decoration:none; color:#1a73e8; font-weight:bold;">
+            CLICK
+          </a>
+        </h3>
+        <ul>
+          TO EXPLORE MY GALLERY
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <marquee><p>&copy; 2026 Muhammad Haziq Haizal Resume Website. IMD318 Assignment Purpose Only. All rights reserved.</p></marquee>
+  </footer>
+
+</body>
+</html>

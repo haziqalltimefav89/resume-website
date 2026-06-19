@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Gallery</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f4f4f9, #e8f0fe);
+      margin: 0;
+      padding: 20px;
+      color: #2c3e50;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px #aaa;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .item {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      animation: fadeInUp 0.8s ease;
+    }
+    .item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .item img, .item iframe, .item audio {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .item p {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+    /* Animation */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 60px;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.8);
+    }
+    .lightbox img {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      border-radius: 10px;
+    }
+    .close {
+      position: absolute;
+      top: 20px; right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>My Random Gallery</h2>
+  <div class="gallery">
+    <!-- Gambar -->
+    <div class="item" onclick="openLightbox('image/porchse.jpg')">
+        <img src="image/porchse.jpg" alt="My Car">
+      </a>
+      <p>My Favorite Car: Porcshe GT3 RS Coupe</p>
+    </div>
+    <!--  Video autoplay takde suara -->
+<div class="item">
+  <video autoplay muted loop width="100%">
+    <source src="video/vid 1 (2).mp4" type="video/mp4">
+    <source src="video/vid 1 (2).ogg" type="video/ogg">
+    <source src="video/vid 1 (2).mpeg" type="video/mpeg">
+    Your browser does not support the video tag.
+  </video>
+
+  <p>My video</p>
+</div>
+    <!-- Audio/Lagu -->
+    <div class="item">
+      <audio controls>
+        <source src="audio/fadetoblack.mp3" type="audio/mp3">
+        <source src="audio/fadetoblack.mp3" type="audio/ogg">
+        <source src="audio/fadetoblack.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <p>My Favorite Song: Fade To Black</p>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="">
+  </div>
+
+<!-- Family Photo -->
+<div class="item" onclick="openLightbox('image/family.jpeg')">
+  <img src="image/family.jpeg" alt="My Family" style="width:200px; height:auto; display:block; margin:0 auto;">
+  <p>👨‍👩‍👧‍👦 My Family</p>
+</div>
+
+<!-- Class Photo -->
+<div class="item" onclick="openLightbox('image/class.jpeg')">
+  <img src="image/class.jpeg" alt="My Class" style="width:200px; height:auto;display:block; margin:0 auto;">
+  <p>📚 My Classmates</p>
+</div>
+
+<!-- Friends Photo -->
+<div class="item" onclick="openLightbox('image/favfren.jpeg')">
+  <img src="image/favfren.jpeg" alt="My Friends" style="width:200px; height:auto; display:block; margin:0 auto;">
+  <p>❤️ My Favourite Friends</p>
+</div>
+
+
+  
+</body>
+</html>
+
